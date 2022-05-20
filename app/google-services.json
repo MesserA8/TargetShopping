@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "236369460354",
+    "project_id": "target-shopping",
+    "storage_bucket": "target-shopping.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:236369460354:android:609ed9cfcca7e9b535089b",
+        "android_client_info": {
+          "package_name": "com.messer_amd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "236369460354-9ccbiosplj5lgjl9cv4ftg4jbsitv5s9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB58xnZeSdX28qNr9doFPURcWh7DlYcviM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "236369460354-9ccbiosplj5lgjl9cv4ftg4jbsitv5s9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
