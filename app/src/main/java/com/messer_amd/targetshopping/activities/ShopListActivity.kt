@@ -45,6 +45,7 @@ class ShopListActivity : AppCompatActivity(), ShopListItemAdapter.Listener {
         init()
         initRcView()
         listItemObserver()
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

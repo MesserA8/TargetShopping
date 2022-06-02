@@ -32,7 +32,7 @@ class NewNoteActivity : AppCompatActivity() {
     private lateinit var binding: ActivityNewNoteBinding
     private lateinit var defPref: SharedPreferences
     private var note: NoteItem? = null
-   // private var pref: SharedPreferences? = null
+   private var pref: SharedPreferences? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,7 +42,7 @@ class NewNoteActivity : AppCompatActivity() {
         setContentView(binding.root)
         actionBarSettings()
         init()
-        //setTextSize()
+        setTextSize()
         getNote()
         getCurrentTime()
         onClickColorPicker()
@@ -52,7 +52,7 @@ class NewNoteActivity : AppCompatActivity() {
     @SuppressLint("ClickableViewAccessibility")
     private fun init(){
         binding.colorPicker.setOnTouchListener(MyTouchListener())
-        //pref = PreferenceManager.getDefaultSharedPreferences(this)
+        pref = PreferenceManager.getDefaultSharedPreferences(this)
     }
 
     private fun onClickColorPicker() = with(binding){
@@ -232,14 +232,14 @@ class NewNoteActivity : AppCompatActivity() {
         binding.edDescription.customSelectionActionModeCallback = actionCallback
     }
 
-//    private fun setTextSize() = with(binding){
-//        edTitle.setTextSize(pref?.getString("title_size_key", "18"))
-//        edDescription.setTextSize(pref?.getString("content_size_key", "16"))
-//    }
-//
-//    private fun EditText.setTextSize(size: String?){
-//        if(size != null) this.textSize = size.toFloat()
-//    }
+    private fun setTextSize() = with(binding){
+        edTitle.setTextSize(pref?.getString("title_size_key", "18"))
+        edDescription.setTextSize(pref?.getString("content_size_key", "16"))
+    }
+
+    private fun EditText.setTextSize(size: String?){
+        if(size != null) this.textSize = size.toFloat()
+    }
 
     private fun getSelectedTheme(): Int{
         return if(defPref.getString("theme_key", "green") == "green"){
