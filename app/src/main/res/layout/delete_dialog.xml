@@ -49,6 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="2dp"
+            android:elevation="6dp"
             android:layout_weight="1"
             android:text="@string/delete_alert" />
 
@@ -57,6 +58,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="2dp"
+            android:elevation="6dp"
             android:layout_weight="1"
             android:text="@string/cancel_button" />
     </LinearLayout>

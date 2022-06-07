@@ -4,8 +4,8 @@ import android.content.SharedPreferences
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
 import android.widget.TextView
+import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -31,6 +31,7 @@ class NoteAdapter(private val listener: Listener, private val defPref: SharedPre
         private var pref: SharedPreferences? = null
 
         fun setData(note: NoteItem, listener: Listener, defPref: SharedPreferences) = with(binding) {
+            pref = PreferenceManager.getDefaultSharedPreferences(itemView.context)
             tvTitle.text = note.title
             tvDescription.text = HtmlManager.getFromHtml(note.content).trim()
             tvTime.text = TimeManager.getTimeFormat(note.time, defPref)
@@ -44,8 +45,8 @@ class NoteAdapter(private val listener: Listener, private val defPref: SharedPre
         }
 
           private  fun setTextSize() = with(binding) {
-            tvTitle.setTextSize(pref?.getString("title_key", "18"))
-            tvDescription.setTextSize(pref?.getString("content_key", "16"))
+            tvTitle.setTextSize(pref?.getString("title_size_key", "18"))
+            tvDescription.setTextSize(pref?.getString("content_size_key", "16"))
         }
 
         private fun TextView.setTextSize(size: String?) {
