@@ -32,7 +32,7 @@ class NewNoteActivity : AppCompatActivity() {
     private lateinit var binding: ActivityNewNoteBinding
     private lateinit var defPref: SharedPreferences
     private var note: NoteItem? = null
-   private var pref: SharedPreferences? = null
+    private var pref: SharedPreferences? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,12 +50,12 @@ class NewNoteActivity : AppCompatActivity() {
     }
 
     @SuppressLint("ClickableViewAccessibility")
-    private fun init(){
+    private fun init() {
         binding.colorPicker.setOnTouchListener(MyTouchListener())
         pref = PreferenceManager.getDefaultSharedPreferences(this)
     }
 
-    private fun onClickColorPicker() = with(binding){
+    private fun onClickColorPicker() = with(binding) {
         imbRed.setOnClickListener {
             setColorForSelectedText(R.color.picker_red)
         }
@@ -102,9 +102,9 @@ class NewNoteActivity : AppCompatActivity() {
         } else if (item.itemId == R.id.id_bold) {
             setBoldForSelectedText()
         } else if (item.itemId == R.id.id_color) {
-            if(binding.colorPicker.isShown){
+            if (binding.colorPicker.isShown) {
                 closeColorPicker()
-            } else{
+            } else {
                 openColorPicker()
             }
         }
@@ -128,16 +128,18 @@ class NewNoteActivity : AppCompatActivity() {
         edDescription.setSelection(startPos)
     }
 
-    private fun setColorForSelectedText(colorId: Int) = with(binding){
+    private fun setColorForSelectedText(colorId: Int) = with(binding) {
         val startPos = edDescription.selectionStart
         val endPos = edDescription.selectionEnd
 
         val styles = edDescription.text.getSpans(startPos, endPos, ForegroundColorSpan::class.java)
-        if(styles.isNotEmpty()) edDescription.text.removeSpan(styles[0])
+        if (styles.isNotEmpty()) edDescription.text.removeSpan(styles[0])
         edDescription.text.setSpan(
             ForegroundColorSpan(
-                ContextCompat.getColor(this@NewNoteActivity, colorId)),
-            startPos, endPos, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+                ContextCompat.getColor(this@NewNoteActivity, colorId)
+            ),
+            startPos, endPos, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+        )
         edDescription.text.trim()
         edDescription.setSelection(startPos)
     }
@@ -209,8 +211,8 @@ class NewNoteActivity : AppCompatActivity() {
         binding.colorPicker.startAnimation(openAnim)
     }
 
-    private fun actionMenuCallback(){
-        val actionCallback = object : ActionMode.Callback{
+    private fun actionMenuCallback() {
+        val actionCallback = object : ActionMode.Callback {
             override fun onCreateActionMode(mode: ActionMode?, menu: Menu?): Boolean {
                 menu?.clear()
                 return true
@@ -232,17 +234,17 @@ class NewNoteActivity : AppCompatActivity() {
         binding.edDescription.customSelectionActionModeCallback = actionCallback
     }
 
-    private fun setTextSize() = with(binding){
+    private fun setTextSize() = with(binding) {
         edTitle.setTextSize(pref?.getString("title_size_key", "18"))
         edDescription.setTextSize(pref?.getString("content_size_key", "16"))
     }
 
-    private fun EditText.setTextSize(size: String?){
-        if(size != null) this.textSize = size.toFloat()
+    private fun EditText.setTextSize(size: String?) {
+        if (size != null) this.textSize = size.toFloat()
     }
 
-    private fun getSelectedTheme(): Int{
-        return if(defPref.getString("theme_key", "green") == "green"){
+    private fun getSelectedTheme(): Int {
+        return if (defPref.getString("theme_key", "green") == "green") {
             R.style.Theme_NewNoteGreen
         } else {
             R.style.Theme_NewNoteRed

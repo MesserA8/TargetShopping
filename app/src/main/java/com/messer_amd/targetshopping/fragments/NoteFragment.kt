@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.activityViewModels
@@ -30,6 +31,7 @@ class NoteFragment : BaseFragment(), NoteAdapter.Listener {
     private lateinit var editLauncher: ActivityResultLauncher<Intent>
     private lateinit var adapter: NoteAdapter
     private lateinit var defPref: SharedPreferences
+
 
     private val mainViewModel: MainViewModel by activityViewModels {
         MainViewModel.MainViewModelFactory((context?.applicationContext as MainApp).database)
@@ -95,8 +97,6 @@ class NoteFragment : BaseFragment(), NoteAdapter.Listener {
         }
     }
 
-
-
     override fun deleteItem(id: Int) {
       mainViewModel.deleteNote(id)
     }
@@ -107,6 +107,8 @@ class NoteFragment : BaseFragment(), NoteAdapter.Listener {
         }
         editLauncher.launch(intent)
     }
+
+
 
     companion object {
         const val NEW_NOTE_KEY = "new_note_key"
