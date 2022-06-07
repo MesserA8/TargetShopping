@@ -51,7 +51,6 @@
                     android:defaultValue="@string/title_size_default"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:key="title_key"
                     android:textSize="18sp"
                     android:textColor="@color/black"
                     android:textStyle="bold" />
@@ -62,7 +61,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
-                    android:key="content_key"
                     android:textSize="16sp"
                     android:textColor="@color/black" />
 
