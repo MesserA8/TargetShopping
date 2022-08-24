@@ -48,7 +48,8 @@
             android:id="@+id/bDelete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="2dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
             android:elevation="6dp"
             android:layout_weight="1"
             android:text="@string/delete_alert" />
@@ -57,7 +58,8 @@
             android:id="@+id/bCancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="2dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
             android:elevation="6dp"
             android:layout_weight="1"
             android:text="@string/cancel_button" />
