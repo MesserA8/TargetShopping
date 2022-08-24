@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.messer_amd.targetshopping">
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
 
     <application
         android:name=".activities.MainApp"
@@ -17,8 +18,12 @@
             android:exported="true" />
         <activity
             android:name=".activities.ShopListActivity"
+            android:parentActivityName=".activities.ShopListActivity"
             android:label="@string/shop_list_name"
             android:exported="true" />
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".activities.ShopListActivity"/>
         <activity
             android:name=".activities.NewNoteActivity"
             android:label="@string/notes_name"
@@ -36,7 +41,7 @@
         </activity>
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713"/>
+            android:value="ca-app-pub-4282262624648834~8567352558"/>
     </application>
 
 </manifest>

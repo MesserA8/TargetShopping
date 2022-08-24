@@ -4,8 +4,6 @@ import android.app.Activity
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,7 +14,6 @@ import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.messer_amd.targetshopping.R
 import com.messer_amd.targetshopping.activities.MainApp
 import com.messer_amd.targetshopping.activities.NewNoteActivity
 import com.messer_amd.targetshopping.databinding.FragmentNoteBinding
@@ -30,6 +27,7 @@ class NoteFragment : BaseFragment(), NoteAdapter.Listener {
     private lateinit var editLauncher: ActivityResultLauncher<Intent>
     private lateinit var adapter: NoteAdapter
     private lateinit var defPref: SharedPreferences
+
 
     private val mainViewModel: MainViewModel by activityViewModels {
         MainViewModel.MainViewModelFactory((context?.applicationContext as MainApp).database)
@@ -95,8 +93,6 @@ class NoteFragment : BaseFragment(), NoteAdapter.Listener {
         }
     }
 
-
-
     override fun deleteItem(id: Int) {
       mainViewModel.deleteNote(id)
     }
@@ -107,6 +103,8 @@ class NoteFragment : BaseFragment(), NoteAdapter.Listener {
         }
         editLauncher.launch(intent)
     }
+
+
 
     companion object {
         const val NEW_NOTE_KEY = "new_note_key"

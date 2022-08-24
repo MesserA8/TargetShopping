@@ -9,6 +9,9 @@ import androidx.preference.PreferenceManager
 import com.google.android.gms.ads.*
 import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
+import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.firebase.analytics.ktx.analytics
+import com.google.firebase.ktx.Firebase
 import com.messer_amd.targetshopping.R
 import com.messer_amd.targetshopping.billing.BillingManager
 import com.messer_amd.targetshopping.databinding.ActivityMainBinding
@@ -19,12 +22,13 @@ import com.messer_amd.targetshopping.settings.SettingsActivity
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
+    private lateinit var analytics: FirebaseAnalytics
     private lateinit var defPref: SharedPreferences
     private var currentMenuItemId = R.id.shop_list
     private var currentTheme = ""
     private var iAd: InterstitialAd? = null
     private var adShowCounter = 0
-    private var adShowCounterMax = 8
+    private var adShowCounterMax = 2
     private lateinit var pref: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,6 +36,7 @@ class MainActivity : AppCompatActivity() {
         setTheme(getSelectedTheme())
 
         super.onCreate(savedInstanceState)
+        analytics = Firebase.analytics
         pref = getSharedPreferences(BillingManager.MAIN_PREF, MODE_PRIVATE)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)

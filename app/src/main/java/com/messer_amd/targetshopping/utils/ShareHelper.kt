@@ -9,6 +9,7 @@ object ShareHelper {
         intent.type = "text/plane"
         intent.apply {
             putExtra(Intent.EXTRA_TEXT, makeShareText(shopList, listName))
+            //intent.setPackage("com.viber.voip")
         }
         return intent
     }

@@ -42,6 +42,7 @@ class ShopListActivity : AppCompatActivity(), ShopListItemAdapter.Listener {
         defPref = PreferenceManager.getDefaultSharedPreferences(this)
         setTheme(getSelectedTheme())
         setContentView(binding.root)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true) //for go back
         init()
         initRcView()
         listItemObserver()
@@ -91,7 +92,7 @@ class ShopListActivity : AppCompatActivity(), ShopListItemAdapter.Listener {
                 startActivity(
                     Intent.createChooser(
                         ShareHelper.shareShopList(adapter?.currentList!!, shopListNameItem?.name!!),
-                        "Share by"
+                        "Share using..."
                     )
                 )
             }

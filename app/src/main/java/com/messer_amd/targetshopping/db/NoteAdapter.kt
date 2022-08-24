@@ -4,6 +4,8 @@ import android.content.SharedPreferences
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -26,8 +28,10 @@ class NoteAdapter(private val listener: Listener, private val defPref: SharedPre
 
     class ItemHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val binding = NoteListItemBinding.bind(view)
+        private var pref: SharedPreferences? = null
 
         fun setData(note: NoteItem, listener: Listener, defPref: SharedPreferences) = with(binding) {
+            pref = PreferenceManager.getDefaultSharedPreferences(itemView.context)
             tvTitle.text = note.title
             tvDescription.text = HtmlManager.getFromHtml(note.content).trim()
             tvTime.text = TimeManager.getTimeFormat(note.time, defPref)
@@ -37,6 +41,16 @@ class NoteAdapter(private val listener: Listener, private val defPref: SharedPre
             imDelete.setOnClickListener {
                 listener.deleteItem(note.id!!)
             }
+            setTextSize()
+        }
+
+          private  fun setTextSize() = with(binding) {
+            tvTitle.setTextSize(pref?.getString("title_size_key", "18"))
+            tvDescription.setTextSize(pref?.getString("content_size_key", "16"))
+        }
+
+        private fun TextView.setTextSize(size: String?) {
+            if (size != null) this.textSize = size.toFloat()
         }
 
         companion object {
@@ -46,6 +60,7 @@ class NoteAdapter(private val listener: Listener, private val defPref: SharedPre
                         .inflate(R.layout.note_list_item, parent, false)
                 )
             }
+
         }
     }
 
@@ -66,3 +81,5 @@ class NoteAdapter(private val listener: Listener, private val defPref: SharedPre
     }
 
 }
+
+
