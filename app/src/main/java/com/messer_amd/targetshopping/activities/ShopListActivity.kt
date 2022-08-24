@@ -42,10 +42,10 @@ class ShopListActivity : AppCompatActivity(), ShopListItemAdapter.Listener {
         defPref = PreferenceManager.getDefaultSharedPreferences(this)
         setTheme(getSelectedTheme())
         setContentView(binding.root)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true) //for go back
         init()
         initRcView()
         listItemObserver()
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

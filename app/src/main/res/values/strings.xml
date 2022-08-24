@@ -22,10 +22,10 @@
     <string name="share_list">Share list</string>
     <string name="new_menu_item">New item</string>
     <string name="save_item">Save item</string>
-    <string name="hint_new_item">New item</string>
+    <string name="hint_new_item">click here for input</string>
     <string name="empty">Empty</string>
-    <string name="update_list_item">Update List Item</string>
-    <string name="update_item_button">Update Item</string>
+    <string name="update_list_item">Update item</string>
+    <string name="update_item_button">Apply</string>
     <string name="general">General</string>
     <string name="chose_note_style">Chose note style</string>
     <string name="chose_time_format">Chose time format</string>

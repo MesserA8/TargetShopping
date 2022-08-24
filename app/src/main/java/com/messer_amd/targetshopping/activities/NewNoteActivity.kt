@@ -182,6 +182,7 @@ class NewNoteActivity : AppCompatActivity() {
         return formatter.format(Calendar.getInstance().time)
     }
 
+    // стрелка возврата в предыдущее меню ->
     private fun actionBarSettings() {
         val ab = supportActionBar
         ab?.setDisplayHomeAsUpEnabled(true)

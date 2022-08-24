@@ -12,5 +12,6 @@
         android:hint="@string/hint_new_item"
         android:inputType="textCapWords"
         android:textColor="@color/white"
+        android:textSize="20sp"
         android:theme="@style/Theme.EditGreen" />
 </LinearLayout>
