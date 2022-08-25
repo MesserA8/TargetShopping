@@ -11,6 +11,7 @@ import android.view.View
 import android.widget.EditText
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.NavUtils
 import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.messer_amd.targetshopping.R
@@ -46,6 +47,7 @@ class ShopListActivity : AppCompatActivity(), ShopListItemAdapter.Listener {
         init()
         initRcView()
         listItemObserver()
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -77,6 +79,7 @@ class ShopListActivity : AppCompatActivity(), ShopListItemAdapter.Listener {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
         when (item.itemId) {
             R.id.save_item -> {
                 addNewShopItem(edItem?.text.toString())
@@ -95,6 +98,10 @@ class ShopListActivity : AppCompatActivity(), ShopListItemAdapter.Listener {
                         "Share using..."
                     )
                 )
+            }
+            android.R.id.home -> {
+                onBackPressed()
+                return true
             }
         }
         return super.onOptionsItemSelected(item)
@@ -236,8 +243,8 @@ class ShopListActivity : AppCompatActivity(), ShopListItemAdapter.Listener {
         super.onBackPressed()
     }
 
-    private fun getSelectedTheme(): Int{
-        return if(defPref.getString("theme_key", "green") == "green"){
+    private fun getSelectedTheme(): Int {
+        return if (defPref.getString("theme_key", "green") == "green") {
             R.style.Theme_NewNoteGreen
         } else {
             R.style.Theme_NewNoteRed
