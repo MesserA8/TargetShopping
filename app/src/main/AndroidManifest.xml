@@ -21,9 +21,6 @@
             android:parentActivityName=".activities.ShopListActivity"
             android:label="@string/shop_list_name"
             android:exported="true" />
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".activities.ShopListActivity"/>
         <activity
             android:name=".activities.NewNoteActivity"
             android:label="@string/notes_name"

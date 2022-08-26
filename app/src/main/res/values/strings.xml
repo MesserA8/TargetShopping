@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TargetShopping</string>
+    <string name="app_name">Target Shopping &amp; Notes </string>
     <string name="shop_list_name">Shopping list</string>
     <string name="settings_activity_name">Settings</string>
     <string name="notes_name">Notes</string>
