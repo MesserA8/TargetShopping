@@ -22,7 +22,7 @@
     <string name="share_list">Share list</string>
     <string name="new_menu_item">New item</string>
     <string name="save_item">Save item</string>
-    <string name="hint_new_item">click here for input</string>
+    <string name="hint_new_item">click here</string>
     <string name="empty">Click [+] for add new item </string>
     <string name="update_list_item">Update item</string>
     <string name="update_item_button">Apply</string>
