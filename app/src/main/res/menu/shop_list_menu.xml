@@ -26,6 +26,6 @@
         android:id="@+id/save_item"
         android:icon="@drawable/ic_save"
         android:orderInCategory="2"
-        app:showAsAction="ifRoom"
+        app:showAsAction="always"
         />
 </menu>
