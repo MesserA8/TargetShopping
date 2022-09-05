@@ -28,8 +28,7 @@
     <string name="general">Основные</string>
     <string name="chose_note_style">Выбор отображения заметок</string>
     <string name="chose_time_format">Выбор формата времени</string>
-    <string name="remove_ads">Убрать рекламу</string>
-    <string name="remove_ads_summary">Убрать рекламу из приложения</string>
+    <string name="remove_ads_summary">поддержать разработчика</string>
     <string name="theme_settings">Цветовая схема приложения</string>
     <string name="chose_theme">Выберите стиль</string>
     <string name="note_text_settings">Настройка текста для заметок</string>
