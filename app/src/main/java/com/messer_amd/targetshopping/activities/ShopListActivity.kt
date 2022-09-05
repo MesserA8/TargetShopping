@@ -14,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NavUtils
 import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.MobileAds
 import com.messer_amd.targetshopping.R
 import com.messer_amd.targetshopping.databinding.ActivityShopListBinding
 import com.messer_amd.targetshopping.db.MainViewModel
@@ -47,7 +49,29 @@ class ShopListActivity : AppCompatActivity(), ShopListItemAdapter.Listener {
         init()
         initRcView()
         listItemObserver()
+        initAdMob()
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+        binding.adView.resume()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        binding.adView.pause()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        binding.adView.destroy()
+    }
+
+    private fun initAdMob() {
+        MobileAds.initialize(this)
+        val adRequest = AdRequest.Builder().build()
+        binding.adView.loadAd(adRequest)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
