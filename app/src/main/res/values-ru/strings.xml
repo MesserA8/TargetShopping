@@ -31,7 +31,7 @@
     <string name="remove_ads">Убрать рекламу</string>
     <string name="remove_ads_summary">Убрать рекламу из приложения</string>
     <string name="theme_settings">Цветовая схема приложения</string>
-    <string name="chose_theme">Выберите цвет</string>
+    <string name="chose_theme">Выберите стиль</string>
     <string name="note_text_settings">Настройка текста для заметок</string>
     <string name="text_size">Размер текста</string>
     <string name="title_text_size">Размер заголовка</string>

@@ -25,7 +25,7 @@
     <string name="empty">Clicați [+] pentru a adăuga</string>
     <string name="update_list_item">Actualizare</string>
     <string name="update_item_button">Aplică</string>
-    <string name="general">Generale</string>
+    <string name="general">Setări generale</string>
     <string name="chose_note_style">Alegeți note style</string>
     <string name="chose_time_format">Alegeți time format</string>
     <string name="remove_ads">Remove ads</string>
