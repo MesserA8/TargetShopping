@@ -9,12 +9,12 @@
     <string name="new_item">Nou</string>
     <string name="title_hint">Titlu</string>
     <string name="description_hint">Descriere</string>
-    <string name="new_list">Denumire nouă</string>
-    <string name="list_name">clicați pentru a intraduce</string>
+    <string name="new_list">Lista nouă</string>
+    <string name="list_name">apăsați pentru a intraduce</string>
     <string name="create_list_button">Creați listă</string>
     <string name="delete_item">Sunteți sigur?</string>
     <string name="delete_alert">Ștergere</string>
-    <string name="cancel_button">Anulare</string>
+    <string name="cancel_button">Anulați</string>
     <string name="update">Actualizare</string>
     <string name="delete_list">Delete list</string>
     <string name="clear_list">Clear list</string>
@@ -22,7 +22,7 @@
     <string name="new_menu_item">New item</string>
     <string name="save_item">Save item</string>
     <string name="hint_new_item">clicați aici</string>
-    <string name="empty">Clicați [+] pentru a adăuga</string>
+    <string name="empty">Apăsați [+] pentru a adăuga</string>
     <string name="update_list_item">Actualizare</string>
     <string name="update_item_button">Aplică</string>
     <string name="general">Setări generale</string>
