@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">TargetShopping</string>
+    <string name="app_name">Target Shopping &amp; Notes </string>
     <string name="shop_list_name">Shopping list</string>
     <string name="settings_activity_name">Settings</string>
     <string name="notes_name">Notes</string>
-    <string name="inter_ad_id">ca-app-pub-4282262624648834/7970825871</string>
+    <string name="inter_ad_id" translatable="false">ca-app-pub-4282262624648834/7970825871</string>
     <string name="settings">Settings</string>
     <string name="notes">Notes</string>
     <string name="shop_list">Shop list</string>
@@ -22,23 +22,26 @@
     <string name="share_list">Share list</string>
     <string name="new_menu_item">New item</string>
     <string name="save_item">Save item</string>
-    <string name="hint_new_item">click here for input</string>
+    <string name="hint_new_item">click here</string>
     <string name="empty">Click [+] for add new item </string>
     <string name="update_list_item">Update item</string>
     <string name="update_item_button">Apply</string>
     <string name="general">General</string>
     <string name="chose_note_style">Chose note style</string>
     <string name="chose_time_format">Chose time format</string>
-    <string name="remove_ads">Remove ads</string>
-    <string name="remove_ads_summary">Remove ads from this app</string>
+    <string name="remove_ads" translatable="false">Donate</string>
+    <string name="remove_ads_summary">Support the developer</string>
     <string name="theme_settings">Theme settings</string>
     <string name="chose_theme">Chose theme</string>
     <string name="note_text_settings">Note text settings</string>
     <string name="text_size">Text size</string>
     <string name="title_text_size">Title text size</string>
     <string name="content_text_size">Content text size</string>
-    <string name="title_size_default">18</string>
-    <string name="content_size_default">16</string>
-    <string name="note_style_default">Linear</string>
-    <string name="def_time_format">hh:mm:ss - dd/MM/yyyy</string>
+    <string name="title_size_default" translatable="false">18</string>
+    <string name="content_size_default" translatable="false">16</string>
+    <string name="note_style_default" translatable="false">Linear</string>
+    <string name="def_time_format" translatable="false">hh:mm:ss - dd/MM/yyyy</string>
+    <string name="name_hint_update">Name</string>
+    <string name="item_info_hint_update">item info</string>
+    <string name="banner_ad_id" translatable="false">ca-app-pub-4282262624648834/2238727209</string>
 </resources>

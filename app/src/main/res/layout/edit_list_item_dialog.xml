@@ -38,7 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Name"
+                android:hint="@string/name_hint_update"
                 android:inputType="textPersonName"
                 tools:ignore="TouchTargetSizeCheck" />
 
@@ -47,7 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="item info"
+                android:hint="@string/item_info_hint_update"
                 android:inputType="textMultiLine"
                 tools:ignore="TouchTargetSizeCheck" />
 

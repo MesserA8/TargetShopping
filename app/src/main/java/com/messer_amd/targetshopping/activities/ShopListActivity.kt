@@ -11,8 +11,11 @@ import android.view.View
 import android.widget.EditText
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.NavUtils
 import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.MobileAds
 import com.messer_amd.targetshopping.R
 import com.messer_amd.targetshopping.databinding.ActivityShopListBinding
 import com.messer_amd.targetshopping.db.MainViewModel
@@ -46,6 +49,29 @@ class ShopListActivity : AppCompatActivity(), ShopListItemAdapter.Listener {
         init()
         initRcView()
         listItemObserver()
+        initAdMob()
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+        binding.adView.resume()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        binding.adView.pause()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        binding.adView.destroy()
+    }
+
+    private fun initAdMob() {
+        MobileAds.initialize(this)
+        val adRequest = AdRequest.Builder().build()
+        binding.adView.loadAd(adRequest)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -77,6 +103,7 @@ class ShopListActivity : AppCompatActivity(), ShopListItemAdapter.Listener {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
         when (item.itemId) {
             R.id.save_item -> {
                 addNewShopItem(edItem?.text.toString())
@@ -95,6 +122,10 @@ class ShopListActivity : AppCompatActivity(), ShopListItemAdapter.Listener {
                         "Share using..."
                     )
                 )
+            }
+            android.R.id.home -> {
+                onBackPressed()
+                return true
             }
         }
         return super.onOptionsItemSelected(item)
@@ -236,8 +267,8 @@ class ShopListActivity : AppCompatActivity(), ShopListItemAdapter.Listener {
         super.onBackPressed()
     }
 
-    private fun getSelectedTheme(): Int{
-        return if(defPref.getString("theme_key", "green") == "green"){
+    private fun getSelectedTheme(): Int {
+        return if (defPref.getString("theme_key", "green") == "green") {
             R.style.Theme_NewNoteGreen
         } else {
             R.style.Theme_NewNoteRed
