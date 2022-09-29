@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
     private var currentTheme = ""
     private var iAd: InterstitialAd? = null
     private var adShowCounter = 0
-    private var adShowCounterMax = 2
+    private var adShowCounterMax = 3
     private lateinit var pref: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {

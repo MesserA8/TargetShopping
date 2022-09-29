@@ -1,13 +1,15 @@
 package com.messer_amd.targetshopping.utils
 
 import android.content.Intent
+import androidx.core.app.ShareCompat
 import com.messer_amd.targetshopping.entities.ShopListItem
 
 object ShareHelper {
     fun shareShopList(shopList: List<ShopListItem>, listName: String): Intent {
         val intent = Intent(Intent.ACTION_SEND)
-        intent.type = "text/plane"
+        intent.type = "text/plain"
         intent.apply {
+            putExtra(Intent.EXTRA_SUBJECT, "shopping list")
             putExtra(Intent.EXTRA_TEXT, makeShareText(shopList, listName))
             //intent.setPackage("com.viber.voip")
         }

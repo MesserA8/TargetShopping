@@ -119,7 +119,7 @@ class ShopListActivity : AppCompatActivity(), ShopListItemAdapter.Listener {
                 startActivity(
                     Intent.createChooser(
                         ShareHelper.shareShopList(adapter?.currentList!!, shopListNameItem?.name!!),
-                        "Share using..."
+                        "Share by"
                     )
                 )
             }
