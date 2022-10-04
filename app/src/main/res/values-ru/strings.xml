@@ -5,12 +5,12 @@
     <string name="notes_name">Заметки</string>
     <string name="settings">Настройки</string>
     <string name="notes">Заметки</string>
-    <string name="shop_list">Список покупок</string>
+    <string name="shop_list">покупки</string>
     <string name="new_item">New</string>
     <string name="title_hint">Заголовок</string>
-    <string name="description_hint">Контент</string>
-    <string name="new_list">Имя нового списка</string>
-    <string name="list_name">нажмите здесь для ввода</string>
+    <string name="description_hint">Содержание</string>
+    <string name="new_list">Имя списка</string>
+    <string name="list_name">нажмите для ввода</string>
     <string name="create_list_button">Создать список</string>
     <string name="delete_item">Вы уверены?</string>
     <string name="delete_alert">Удалить</string>
@@ -18,7 +18,7 @@
     <string name="update">Изменить</string>
     <string name="delete_list">Удалить список</string>
     <string name="clear_list">Очистить список</string>
-    <string name="share_list">Поделиться</string>
+    <string name="share_list">Отправить</string>
     <string name="new_menu_item">Новый элемент</string>
     <string name="save_item">Сохранить</string>
     <string name="hint_new_item">нажмите здесь</string>

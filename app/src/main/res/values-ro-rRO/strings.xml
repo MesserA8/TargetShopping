@@ -8,7 +8,7 @@
     <string name="shop_list">Cumpărături</string>
     <string name="new_item">Nou</string>
     <string name="title_hint">Titlu</string>
-    <string name="description_hint">Descriere</string>
+    <string name="description_hint">Nota</string>
     <string name="new_list">Lista nouă</string>
     <string name="list_name">apăsați pentru a intraduce</string>
     <string name="create_list_button">Creați listă</string>
@@ -18,9 +18,9 @@
     <string name="update">Actualizare</string>
     <string name="delete_list">Delete list</string>
     <string name="clear_list">Clear list</string>
-    <string name="share_list">Share list</string>
-    <string name="new_menu_item">New item</string>
-    <string name="save_item">Save item</string>
+    <string name="share_list">Trimite lista</string>
+    <string name="new_menu_item">Element nou</string>
+    <string name="save_item">Salvați</string>
     <string name="hint_new_item">clicați aici</string>
     <string name="empty">Apăsați [+] pentru a adăuga</string>
     <string name="update_list_item">Actualizare</string>
