@@ -22,7 +22,7 @@ object ShareHelper {
         sBuilder.append("\n")
         var counter = 0
         shopList.forEach {
-            sBuilder.append("${++counter}. ${it.name} (${it.itemInfo})")
+            sBuilder.append("${++counter}. ${it.name} ${it.itemInfo}")
             sBuilder.append("\n")
         }
         return sBuilder.toString()
